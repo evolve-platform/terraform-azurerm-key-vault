@@ -1,5 +1,6 @@
 output "key_vault_id" {
-  value = azurerm_key_vault.this.id
+  description = "The ID of the key vault"
+  value       = azurerm_key_vault.this.id
 
   depends_on = [
     azurerm_role_assignment.keyvault_admin,
@@ -7,3 +8,9 @@ output "key_vault_id" {
     azurerm_role_assignment.keyvault_reader
   ]
 }
+
+output "name" {
+  description = "The name of the key vault"
+  value       = azurerm_key_vault.this.name
+}
+

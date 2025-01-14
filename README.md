@@ -41,5 +41,6 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_key_vault_id"></a> [key\_vault\_id](#output\_key\_vault\_id) | n/a |
+| <a name="output_key_vault_id"></a> [key\_vault\_id](#output\_key\_vault\_id) | The ID of the key vault |
+| <a name="output_name"></a> [name](#output\_name) | The name of the key vault |
 <!-- END_TF_DOCS -->
