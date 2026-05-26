@@ -4,13 +4,15 @@ Terraform module to manage an Azure Key Vault.
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
-No requirements.
+| Name | Version |
+|------|---------|
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 4.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | n/a |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | ~> 4.0 |
 
 ## Modules
 
@@ -32,6 +34,8 @@ No modules.
 | <a name="input_location"></a> [location](#input\_location) | The location to be used for the key vault | `string` | n/a | yes |
 | <a name="input_management_principals"></a> [management\_principals](#input\_management\_principals) | The managers of the key vault | `map(string)` | `{}` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the key vault | `string` | n/a | yes |
+| <a name="input_public_network_access_enabled"></a> [public\_network\_access\_enabled](#input\_public\_network\_access\_enabled) | Whether public network access is enabled for the key vault | `bool` | `true` | no |
+| <a name="input_purge_protection_enabled"></a> [purge\_protection\_enabled](#input\_purge\_protection\_enabled) | Whether purge protection is enabled for the key vault | `bool` | `false` | no |
 | <a name="input_reader_principals"></a> [reader\_principals](#input\_reader\_principals) | The provisioners of the key vault | `map(string)` | `{}` | no |
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | The resource group to be used for the key vault | `string` | n/a | yes |
 | <a name="input_tags"></a> [tags](#input\_tags) | Tags to be used on resources. | `map(string)` | `{}` | no |
