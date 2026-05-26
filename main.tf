@@ -3,14 +3,13 @@ resource "azurerm_key_vault" "this" {
   location                    = var.location
   resource_group_name         = var.resource_group_name
   enabled_for_disk_encryption = true
-  enable_rbac_authorization   = true
+  rbac_authorization_enabled  = true
   tenant_id                   = var.tenant_id
   soft_delete_retention_days  = 7
-  purge_protection_enabled    = false
+  purge_protection_enabled    = var.purge_protection_enabled
   tags                        = var.tags
 
-  # TODO:
-  # public_network_access_enabled = false
+  public_network_access_enabled = var.public_network_access_enabled
   # network_acls {
   #   bypass                     = "AzureServices"
   #   default_action             = "Deny"
@@ -19,7 +18,6 @@ resource "azurerm_key_vault" "this" {
 
   sku_name = "standard"
 }
-
 
 resource "azurerm_role_assignment" "keyvault_admin" {
   for_each = var.management_principals

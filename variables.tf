@@ -32,6 +32,18 @@ variable "reader_principals" {
   default     = {}
 }
 
+variable "public_network_access_enabled" {
+  description = "Whether public network access is enabled for the key vault"
+  type        = bool
+  default     = true
+}
+
+variable "purge_protection_enabled" {
+  description = "Whether purge protection is enabled for the key vault"
+  type        = bool
+  default     = false
+}
+
 variable "tags" {
   type        = map(string)
   description = "Tags to be used on resources."

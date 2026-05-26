@@ -1,0 +1,3 @@
+kind: Added
+body: Added variables for public_network_access_enabled and purge_protection_enabled, and aligned the module with azurerm v4 by adding a required provider constraint and updating the Key Vault RBAC authorization field name.
+time: 2026-05-26T09:25:22.003405247+02:00
