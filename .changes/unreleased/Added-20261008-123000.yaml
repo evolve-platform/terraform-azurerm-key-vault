@@ -1,3 +1,0 @@
-kind: Added
-body: Support azurerm v5 by widening the provider constraint to >= 4.0, < 6.0
-time: 2026-10-08T12:30:00.000000+02:00
